@@ -1,5 +1,7 @@
 # Genç 2030 · Elazığ Söyleşisi
 
+## Doç. Dr. Ferhat Uçar | Fırat Üniversitesi | Teknoloji Fakültesi | Yazılım Mühendisliği (İngilizce - UOLP)
+
 Bu depo, **Gençlik ve Spor Bakanlığı — Gençlik Hizmetleri Genel Müdürlüğü**
 tarafından yürütülen **Genç 2030 · Dijital Yetkinlikler ve Yapay Zeka Atölyesi**
 kapsamında Elazığ ekibiyle liseli ve üniversiteli gençlere yönelik hazırlanan
