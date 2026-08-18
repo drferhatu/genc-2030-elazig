@@ -271,6 +271,85 @@ a{color:inherit;text-decoration:none}
 
 /* PLAN INTRO */
 .plan-intro{padding-top:clamp(60px,8vh,100px)}
+
+/* RESMI DUYURU KARTI */
+.announce{
+  display:grid;
+  grid-template-columns:minmax(220px, 320px) 1fr;
+  gap:clamp(20px,3vw,36px);
+  align-items:center;
+  padding:clamp(20px,2.4vw,32px);
+  border-radius:var(--radius);
+  border:1px solid var(--line-2);
+  background:
+    linear-gradient(135deg, rgba(46,107,255,.10), rgba(227,10,23,.06)),
+    var(--card-2);
+  margin:0 0 40px;
+  transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  color:inherit;
+  overflow:hidden;
+  position:relative;
+}
+.announce::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(circle at 100% 0%, rgba(46,107,255,.18), transparent 50%);
+}
+.announce:hover{
+  transform:translateY(-3px);
+  border-color:var(--blue);
+  box-shadow:0 24px 60px -24px rgba(46,107,255,.45);
+}
+.announce-cover{
+  position:relative;z-index:1;
+  border-radius:14px;overflow:hidden;
+  box-shadow:0 12px 40px -10px rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.06);
+  aspect-ratio: 855 / 1200;
+  background:#0a1230;
+}
+.announce-cover img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.announce-body{position:relative;z-index:1;display:flex;flex-direction:column;gap:14px}
+.announce-chip{
+  display:inline-flex;align-items:center;gap:10px;align-self:flex-start;
+  padding:8px 14px;border-radius:999px;
+  border:1px solid var(--line-2);background:rgba(227,10,23,.10);
+  font-size:12.5px;color:var(--ink);font-weight:600;letter-spacing:.02em;
+}
+.announce-chip .pulse{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--red-soft);box-shadow:0 0 0 4px rgba(227,10,23,.22);
+  animation:pulse 2s ease-in-out infinite;
+}
+.announce h3{
+  font-size:clamp(24px,2.6vw,34px);
+  font-weight:800;letter-spacing:-.02em;line-height:1.15;
+  margin:0;
+}
+.announce p{
+  color:var(--ink-mute);
+  font-size:clamp(15px,1.25vw,17.5px);
+  line-height:1.55;margin:0;
+  max-width:60ch;
+}
+.announce-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  align-self:flex-start;margin-top:6px;
+  padding:12px 18px;border-radius:999px;
+  background:var(--grad-1);color:#fff;
+  font-weight:600;font-size:14.5px;
+  box-shadow:0 12px 30px -12px rgba(46,107,255,.55);
+  transition:transform .2s ease;
+}
+.announce:hover .announce-cta{transform:translateY(-2px)}
+.announce-cta svg{transition:transform .3s ease}
+.announce:hover .announce-cta svg{transform:translate(2px,-2px)}
+
+@media (max-width:720px){
+  .announce{grid-template-columns:1fr;gap:22px}
+  .announce-cover{max-width:280px;margin:0 auto}
+}
 .axis-row{
   display:flex;flex-wrap:wrap;gap:10px;
   margin-top:12px;
